@@ -1,0 +1,31 @@
+mixin group(name,layout,size)
+  WidgetGroup
+    ObjectName= name
+    Layout= layout
+    Size= size
+    Children
+      if block
+        block
+      else
+        
+mixin template(src)
+  if block
+    Template(src='skin:widgets/'+src+'.xml')
+      block
+  else
+    Template/(src='skin:widgets/'+src+'.xml')
+      
+mixin get(name)
+  Variable/(name=name)
+
+mixin set(name,val)
+  if block
+    SetVariable(name=name)
+      block
+  else
+    SetVariable(name=name)!= val
+
+doctype template
+block comment
+Template
+  block template

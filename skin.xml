@@ -8,10 +8,11 @@
     <language>en</language>
     <license>Creative Commons Attribution, Share-Alike 3.0 Unported</license>
     <attributes>
+      <!-- Init number of available widgets-->
       <attribute config_key="[Master],num_decks">4</attribute>
       <attribute config_key="[Master],num_samplers">16</attribute>
       <attribute config_key="[Master],num_preview_decks">1</attribute>
-      <!--Optionally, make elements visible on skin load-->
+      <!-- Init elements visibility-->
       <attribute persist="true" config_key="[Spinny1],show_spinny">1</attribute>
       <attribute persist="true" config_key="[Spinny2],show_spinny">1</attribute>
       <attribute persist="true" config_key="[Spinny3],show_spinny">1</attribute>
@@ -20,23 +21,18 @@
       <attribute persist="true" config_key="[Microphone],show_microphone">0</attribute>
       <attribute persist="true" config_key="[Vinylcontrol],show_vinylcontrol">0</attribute>
       <attribute persist="true" config_key="[PreviewDeck],show_previewdeck">0</attribute>
-      <attribute config_key="[Library],show_library">1</attribute>
+      <attribute persist="true" config_key="[Library],show_library">1</attribute>
       <attribute persist="true" config_key="[Library],show_coverart">0</attribute>
     </attributes>
   </manifest>
-
   <ObjectName>Mixxx</ObjectName>
   <Style src="skin:style.qss"/>
-
   <MinimumSize>-1,-1</MinimumSize>
-  <SizePolicy>me,me</SizePolicy>
   <Layout>horizontal</Layout>
   <Children>
     <Template src="skin:widgets/deck.xml">
-      <SetVariable name="section-group">Channel1</SetVariable>
+      <SetVariable name="group">Channel1</SetVariable>
     </Template>
-    <Template src="skin:widgets/mixer.xml">
-    </Template>
+    <Template src="skin:widgets/mixer.xml"></Template>
   </Children>
-
 </skin>
