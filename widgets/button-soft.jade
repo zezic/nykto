@@ -1,0 +1,61 @@
+//output:button-soft.xml
+extends ./template.jade
+block comment
+  //
+    Description:
+      A button with symbol.
+    Variables:
+      group: The group to connect to.
+      control: The control to connect to.
+      right-control: The right button control to connect to.
+      indicator: The indicator control to connect to.
+      symbol: Symbol filename base.
+      colour-group: The colour group.
+      size: Size =)
+block template
+  +group('TestButton','stacked','<Variable name="size"/>')
+    PushButton
+      ObjectName PlayToggle
+      SizePolicy me,me
+      NumberStates 2
+      LeftClickIsPushButton false
+      RightClickIsPushButton false
+      State
+        Number 0
+      State
+        Number 1
+      Connection
+        ConfigKey: [<Variable name="group"/>],<Variable name="control"/>
+        EmitOnPressAndRelease true
+        ButtonState LeftButton
+        ConnectValueToWidget false
+      Connection
+        ConfigKey: [<Variable name="group"/>],<Variable name="right-control"/>
+        EmitOnPressAndRelease true
+        ButtonState RightButton
+        ConnectValueToWidget false
+      Connection
+        ConfigKey: [<Variable name="group"/>],<Variable name="indicator"/>
+        ConnectValueToWidget false
+    +group('TestButtonBG','vertical','me,me')
+      +group('TestButtonBGSpacer','vertical','me,6f')
+      +group('TestButtonBGBodyContainer','stacked','me,me')
+        +group('TestButtonBGBodyOverlay','vertical','me,me')
+          +group('TestButtonBGBodyInner','vertical','me,me')
+        +group('TestButtonBGBody<Variable name="colour-group"/>','vertical','me,me','[<Variable name="group"/>],<Variable name="indicator"/>')
+          PushButton
+            SizePolicy f,f
+            NumberStates 1
+            State
+              Number 0
+              Unpressed(scalemode='FIXED') widgets/symbols/<Variable name="symbol"/>-black.svg
+        +group('TestButtonBGBody','vertical','me,me','[<Variable name="group"/>],<Variable name="indicator"/>','not')
+          PushButton
+            SizePolicy f,f
+            NumberStates 1
+            State
+              Number 0
+              Unpressed(scalemode="FIXED") widgets/symbols/<Variable name="symbol"/>.svg
+      +group('TestButtonBGShadow','vertical','me,6f','[<Variable name="group"/>],<Variable name="indicator"/>','not')
+      +group('TestButtonBGNoShadow','vertical','me,6f','[<Variable name="group"/>],<Variable name="indicator"/>')
+      

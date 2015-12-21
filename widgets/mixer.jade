@@ -1,0 +1,18 @@
+//output:mixer.xml
+extends ./template.jade
+block comment
+  //
+    Description:
+      A mixer.
+block template
+  +group('Mixer','vertical','f,f')
+    +group('MixerPart','horizontal','f,f')
+      +template('mixer-section-eq')
+        +set('group','Channel1')
+      +template('mixer-section-level')
+        +set('group','Channel1')
+      +template('mixer-section-level')
+        +set('group','Channel2')
+      +template('mixer-section-eq')
+        +set('group','Channel2')
+    +template('mixer-section-xfader')

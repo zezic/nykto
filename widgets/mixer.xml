@@ -1,35 +1,34 @@
 <!DOCTYPE template>
 <!--
-  Description:
-    A mixer.
+Description:
+  A mixer.
 -->
 <Template>
   <WidgetGroup>
+    <ObjectName>Mixer</ObjectName>
     <Layout>vertical</Layout>
     <Size>f,f</Size>
-    <ObjectName>Mixer</ObjectName>
     <Children>
       <WidgetGroup>
+        <ObjectName>MixerPart</ObjectName>
         <Layout>horizontal</Layout>
         <Size>f,f</Size>
-        <ObjectName>MixerPart</ObjectName>
         <Children>
           <Template src="skin:widgets/mixer-section-eq.xml">
-            <SetVariable name="section-group">Channel1</SetVariable>
+            <SetVariable name="group">Channel1</SetVariable>
           </Template>
           <Template src="skin:widgets/mixer-section-level.xml">
-            <SetVariable name="section-group">Channel1</SetVariable>
+            <SetVariable name="group">Channel1</SetVariable>
           </Template>
           <Template src="skin:widgets/mixer-section-level.xml">
-            <SetVariable name="section-group">Channel2</SetVariable>
+            <SetVariable name="group">Channel2</SetVariable>
           </Template>
           <Template src="skin:widgets/mixer-section-eq.xml">
-            <SetVariable name="section-group">Channel2</SetVariable>
+            <SetVariable name="group">Channel2</SetVariable>
           </Template>
         </Children>
       </WidgetGroup>
-      <Template src="skin:widgets/mixer-section-xfader.xml">
-      </Template>
+      <Template src="skin:widgets/mixer-section-xfader.xml"/>
     </Children>
   </WidgetGroup>
 </Template>

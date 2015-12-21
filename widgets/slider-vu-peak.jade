@@ -1,0 +1,48 @@
+//output:slider-vu-peak.xml
+extends ./template.jade
+block comment
+  //
+    Description:
+      A knob with label-button.
+    Variables:
+      group: The group to connect to.
+      control: The control rotary connect to.
+      label: Label text.
+      button_control: The control button with label connect to.
+block template
+  +group('','stacked','52f,me')
+    SliderComposed
+      Handle widgets/slider/slider-handle.svg
+      Slider 
+      SizePolicy min,me
+      MinimumSize 52,70
+      MaximumSize 52,-1
+      Horizontal false
+      Connection
+        ConfigKey [<Variable name="group"/>],<Variable name="control"/>
+    +group('VuMeterContainer','horizontal')
+      +group('VuMeterBG','stacked','2f,me')
+        StatusLight
+          SizePolicy min,me
+          MinimumSize 2,30
+          MaximumSize 2,-1
+          PathStatusLight(scalemode="STRETCH") widgets/slider/slider-vu-peak.svg
+          Connection
+            ConfigKey [<Variable name="group"/>],<Variable name="peak"/>
+        VuMeter
+          PathVu(scalemode="STRETCH") widgets/slider/slider-vu-fill.svg
+          SizePolicy min,me
+          MinimumSize 2,30
+          MaximumSize 2,-1
+          Horizontal false
+          PeakHoldSize 2
+          PeakHoldTime 200
+          PeakFallTime 20
+          PeakFallStep 1
+          Connection
+            ConfigKey [<Variable name="group"/>],<Variable name="vu"/>
+    +group('','vertical')
+      +group('SliderRangeStroke','','52f,18f')
+      +group('ExpanderVertical','','1f,me')
+      +group('SliderRangeStroke','','52f,18f')
+          

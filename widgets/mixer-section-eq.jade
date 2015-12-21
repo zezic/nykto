@@ -1,0 +1,40 @@
+//output:mixer-section-eq.xml
+extends ./template.jade
+block comment
+  //
+    Description:
+      A mixer EQ+Filter section.
+    Variables:
+      section-group: The group to connect to.
+block template
+  +group('MixerFilterPart','vertical','f,f')
+    +group('ContainerHigh','vertical','f,f')
+      +template('knob')
+        +set('button_group','QuickEffectRack1_[<Variable name="group"/>]_Effect1')
+        +set('group','QuickEffectRack1_[<Variable name="group"/>]')
+        +set('control','super1')
+        +set('button_control','enabled')
+        +set('label','Filter')
+        +set('color','Yellow')
+    +group('ContainerTopEQ','vertical','f,f')
+      +template('knob')
+        +set('button_group','EqualizerRack1_[<Variable name="group"/>]_Effect1')
+        +set('group','EqualizerRack1_[<Variable name="group"/>]_Effect1')
+        +set('control','parameter3')
+        +set('button_control','button_parameter3')
+        +set('label','High')
+        +set('color','White')
+      +template('knob')
+        +set('button_group','EqualizerRack1_[<Variable name="group"/>]_Effect1')
+        +set('group','EqualizerRack1_[<Variable name="group"/>]_Effect1')
+        +set('control','parameter2')
+        +set('button_control','button_parameter2')
+        +set('label','Mid')
+        +set('color','White')
+      +template('knob')
+        +set('button_group','EqualizerRack1_[<Variable name="group"/>]_Effect1')
+        +set('group','EqualizerRack1_[<Variable name="group"/>]_Effect1')
+        +set('control','parameter1')
+        +set('button_control','button_parameter1')
+        +set('label','Low')
+        +set('color','White')

@@ -34,5 +34,8 @@
       <SetVariable name="group">Channel1</SetVariable>
     </Template>
     <Template src="skin:widgets/mixer.xml"></Template>
+    <Template src="skin:widgets/deck.xml">
+      <SetVariable name="group">Channel2</SetVariable>
+    </Template>
   </Children>
 </skin>

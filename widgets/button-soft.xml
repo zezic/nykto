@@ -1,21 +1,21 @@
 <!DOCTYPE template>
 <!--
-  Description:
-    A button with symbol.
-  Variables:
-    group: The group to connect to.
-    control: The control to connect to.
-    right-control: The right button control to connect to.
-    indicator: The indicator control to connect to.
-    symbol: Symbol filename base.
-    colour-group: The colour group.
-    size: Size =)
+Description:
+  A button with symbol.
+Variables:
+  group: The group to connect to.
+  control: The control to connect to.
+  right-control: The right button control to connect to.
+  indicator: The indicator control to connect to.
+  symbol: Symbol filename base.
+  colour-group: The colour group.
+  size: Size =)
 -->
 <Template>
   <WidgetGroup>
+    <ObjectName>TestButton</ObjectName>
     <Layout>stacked</Layout>
     <Size><Variable name="size"/></Size>
-    <ObjectName>TestButton</ObjectName>
     <Children>
       <PushButton>
         <ObjectName>PlayToggle</ObjectName>
@@ -43,46 +43,44 @@
         </Connection>
         <Connection>
           <ConfigKey>[<Variable name="group"/>],<Variable name="indicator"/></ConfigKey>
-          <ConnectValueFromWidget>false</ConnectValueFromWidget>
+          <ConnectValueToWidget>false</ConnectValueToWidget>
         </Connection>
       </PushButton>
       <WidgetGroup>
+        <ObjectName>TestButtonBG</ObjectName>
         <Layout>vertical</Layout>
         <Size>me,me</Size>
-        <ObjectName>TestButtonBG</ObjectName>
         <Children>
           <WidgetGroup>
+            <ObjectName>TestButtonBGSpacer</ObjectName>
             <Layout>vertical</Layout>
             <Size>me,6f</Size>
-            <ObjectName>TestButtonBGSpacer</ObjectName>
             <Children>
-
             </Children>
           </WidgetGroup>
-
           <WidgetGroup>
+            <ObjectName>TestButtonBGBodyContainer</ObjectName>
             <Layout>stacked</Layout>
             <Size>me,me</Size>
-            <ObjectName>TestButtonBGBodyContainer</ObjectName>
             <Children>
               <WidgetGroup>
+                <ObjectName>TestButtonBGBodyOverlay</ObjectName>
                 <Layout>vertical</Layout>
                 <Size>me,me</Size>
-                <ObjectName>TestButtonBGBodyOverlay</ObjectName>
                 <Children>
                   <WidgetGroup>
+                    <ObjectName>TestButtonBGBodyInner</ObjectName>
                     <Layout>vertical</Layout>
                     <Size>me,me</Size>
-                    <ObjectName>TestButtonBGBodyInner</ObjectName>
                     <Children>
                     </Children>
                   </WidgetGroup>
                 </Children>
               </WidgetGroup>
               <WidgetGroup>
+                <ObjectName>TestButtonBGBody<Variable name="colour-group"/></ObjectName>
                 <Layout>vertical</Layout>
                 <Size>me,me</Size>
-                <ObjectName>TestButtonBGBody<Variable name="colour-group"/></ObjectName>
                 <Children>
                   <PushButton>
                     <SizePolicy>f,f</SizePolicy>
@@ -99,9 +97,9 @@
                 </Connection>
               </WidgetGroup>
               <WidgetGroup>
+                <ObjectName>TestButtonBGBody</ObjectName>
                 <Layout>vertical</Layout>
                 <Size>me,me</Size>
-                <ObjectName>TestButtonBGBody</ObjectName>
                 <Children>
                   <PushButton>
                     <SizePolicy>f,f</SizePolicy>
@@ -122,11 +120,10 @@
               </WidgetGroup>
             </Children>
           </WidgetGroup>
-
           <WidgetGroup>
+            <ObjectName>TestButtonBGShadow</ObjectName>
             <Layout>vertical</Layout>
             <Size>me,6f</Size>
-            <ObjectName>TestButtonBGShadow</ObjectName>
             <Children>
             </Children>
             <Connection>
@@ -138,9 +135,9 @@
             </Connection>
           </WidgetGroup>
           <WidgetGroup>
+            <ObjectName>TestButtonBGNoShadow</ObjectName>
             <Layout>vertical</Layout>
             <Size>me,6f</Size>
-            <ObjectName>TestButtonBGNoShadow</ObjectName>
             <Children>
             </Children>
             <Connection>

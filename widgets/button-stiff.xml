@@ -1,14 +1,15 @@
 <!DOCTYPE template>
 <!--
-  Description:
-    A button with label.
-  Variables:
-    group: The group to connect to.
-    control: The control to connect to.
-    label: Label text.
+Description:
+  A button with label.
+Variables:
+  group: The group to connect to.
+  control: The control to connect to.
+  label: Label text.
 -->
 <Template>
   <WidgetGroup>
+    <ObjectName>StiffButtonOuter</ObjectName>
     <Layout>stacked</Layout>
     <Size>44f,19f</Size>
     <Children>
@@ -35,25 +36,32 @@
         </Connection>
       </PushButton>
       <WidgetGroup>
+        <ObjectName>LabelWithShadow</ObjectName>
         <Layout>stacked</Layout>
         <Children>
           <WidgetGroup>
+            <ObjectName>StiffButtonLabelContainer</ObjectName>
             <Layout>vertical</Layout>
             <Children>
               <Label>
                 <ObjectName>StiffButtonLabel</ObjectName>
                 <Size>f,f</Size>
-                <Text><Variable name="label"/></Text>
+                <Text>
+                  <Variable name="label"/>
+                </Text>
               </Label>
             </Children>
           </WidgetGroup>
           <WidgetGroup>
+            <ObjectName>StiffButtonLabelShadowContainer</ObjectName>
             <Layout>vertical</Layout>
             <Children>
               <Label>
                 <ObjectName>StiffButtonLabelShadow</ObjectName>
                 <Size>f,f</Size>
-                <Text><Variable name="label"/></Text>
+                <Text>
+                  <Variable name="label"/>
+                </Text>
               </Label>
             </Children>
           </WidgetGroup>

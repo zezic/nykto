@@ -375,7 +375,7 @@ QToolTip {
   background: url(skin:/widgets/knob/big/bg.svg);
 }
 
-#UnderknobButton {
+#UnderknobButtonWhite {
   border-radius: 2px;
   margin-top: 1px;
   margin-bottom: 3px;
@@ -383,11 +383,11 @@ QToolTip {
   font-weight: bold;
   font-size: 9px;
 }
-#UnderknobButton[value="0"] {
+#UnderknobButtonWhite[value="0"] {
   background-color: rgba(0,0,0,32%);
   color: white;
 }
-#UnderknobButton[value="1"] {
+#UnderknobButtonWhite[value="1"] {
   background-color: white;
   color: black;
 }

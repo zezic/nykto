@@ -1,12 +1,12 @@
 <!DOCTYPE template>
 <!--
-  Description:
-    A knob with label-button.
-  Variables:
-    group: The group to connect to.
-    control: The control rotary connect to.
-    label: Label text.
-    button_control: The control button with label connect to.
+Description:
+  A knob with label-button.
+Variables:
+  group: The group to connect to.
+  control: The control rotary connect to.
+  label: Label text.
+  button_control: The control button with label connect to.
 -->
 <Template>
   <WidgetGroup>
@@ -32,27 +32,31 @@
           </KnobComposed>
           <Knob>
             <NumberStates>91</NumberStates>
-            <Path>widgets/knob/big/arc/arc_%1.svg</Path>
+            <Path>widgets/knob/big/arc<Variable name="color"/>/arc_%1.svg</Path>
             <Pos>0,0</Pos>
             <Connection>
               <ConfigKey>[<Variable name="group"/>],<Variable name="control"/></ConfigKey>
             </Connection>
           </Knob>
           <PushButton>
-            <ObjectName>UnderknobButton</ObjectName>
+            <ObjectName>UnderknobButton<Variable name="color"/></ObjectName>
             <Size>40f,15f</Size>
             <Pos>0,36</Pos>
             <NumberStates>2</NumberStates>
             <RightClickIsPushButton>true</RightClickIsPushButton>
             <State>
               <Number>0</Number>
-              <Text><Variable name="label"/></Text>
+              <Text>
+                <Variable name="label"/>
+              </Text>
               <Pressed scalemode="STRETCH_ASPECT"></Pressed>
               <Unpressed scalemode="STRETCH_ASPECT"></Unpressed>
             </State>
             <State>
               <Number>1</Number>
-              <Text><Variable name="label"/></Text>
+              <Text>
+                <Variable name="label"/>
+              </Text>
               <Pressed scalemode="STRETCH_ASPECT"></Pressed>
               <Unpressed scalemode="STRETCH_ASPECT"></Unpressed>
             </State>
