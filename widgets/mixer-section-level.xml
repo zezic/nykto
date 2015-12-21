@@ -1,0 +1,53 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    A mixer level section.
+  Variables:
+    section-group: The group to connect to.
+-->
+<Template>
+    <WidgetGroup>
+      <Layout>vertical</Layout>
+      <Size>f,me</Size>
+      <ObjectName>DeckLevels</ObjectName>
+      <Children>
+        <WidgetGroup>
+          <Layout>vertical</Layout>
+          <Size>f,me</Size>
+          <ObjectName>ContainerMid</ObjectName>
+          <Children>
+            <Template src="skin:widgets/slider-vu-peak.xml">
+              <SetVariable name="group"><Variable name="section-group"/></SetVariable>
+              <SetVariable name="control">volume</SetVariable>
+              <SetVariable name="vu">VuMeter</SetVariable>
+              <SetVariable name="peak">PeakIndicator</SetVariable>
+            </Template>
+          </Children>
+        </WidgetGroup>
+        <WidgetGroup>
+          <Layout>vertical</Layout>
+          <Size>f,f</Size>
+          <ObjectName>ContainerTop</ObjectName>
+          <Children>
+            <Template src="skin:widgets/button-stiff.xml">
+              <SetVariable name="group"><Variable name="section-group"/></SetVariable>
+              <SetVariable name="control">pfl</SetVariable>
+              <SetVariable name="label">PFL</SetVariable>
+            </Template>
+            <WidgetGroup>
+              <Layout>horizontal</Layout>
+              <Children>
+                <Template src="skin:widgets/knob.xml">
+                  <SetVariable name="group"><Variable name="section-group"/></SetVariable>
+                  <SetVariable name="control">pregain</SetVariable>
+                  <SetVariable name="button_group"><Variable name="section-group"/></SetVariable>
+                  <SetVariable name="button_control">mute</SetVariable>
+                  <SetVariable name="label">Gain</SetVariable>
+                </Template>
+              </Children>
+            </WidgetGroup>
+          </Children>
+        </WidgetGroup>
+      </Children>
+    </WidgetGroup>
+</Template>

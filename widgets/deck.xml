@@ -1,0 +1,80 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    A deck.
+-->
+<Template>
+  <WidgetGroup>
+    <Layout>horizontal</Layout>
+    <Size>me,56f</Size>
+    <ObjectName>DeckTransport</ObjectName>
+    <Children>
+      <WidgetGroup>
+        <Layout>stacked</Layout>
+        <Size>f,f</Size>
+        <ObjectName>ButtonGroup</ObjectName>
+        <Children>
+          <WidgetGroup>
+            <Layout>horizontal</Layout>
+            <Size>f,f</Size>
+            <ObjectName>ButtonGroupContainer</ObjectName>
+            <Children>
+              <Template src="skin:widgets/button-soft.xml">
+                <SetVariable name="group"><Variable name="section-group"/></SetVariable>
+                <SetVariable name="control">reverse</SetVariable>
+                <SetVariable name="right-control">reverseroll</SetVariable>
+                <SetVariable name="indicator">reverse</SetVariable>
+                <SetVariable name="symbol">reverse</SetVariable>
+                <SetVariable name="colour-group">Transport</SetVariable>
+                <SetVariable name="size">24f,46f</SetVariable>
+              </Template>
+              <Template src="skin:widgets/button-soft.xml">
+                <SetVariable name="group"><Variable name="section-group"/></SetVariable>
+                <SetVariable name="control">play</SetVariable>
+                <SetVariable name="right-control">cue_set</SetVariable>
+                <SetVariable name="indicator">play_indicator</SetVariable>
+                <SetVariable name="symbol">play</SetVariable>
+                <SetVariable name="colour-group">Transport</SetVariable>
+                <SetVariable name="size">48f,46f</SetVariable>
+              </Template>
+            </Children>
+          </WidgetGroup>
+          <Template src="skin:widgets/buttongroup-bg.xml"/>
+        </Children>
+      </WidgetGroup>
+      <WidgetGroup>
+        <Layout>stacked</Layout>
+        <Size>f,f</Size>
+        <ObjectName>ButtonGroup</ObjectName>
+        <Children>
+          <WidgetGroup>
+            <Layout>horizontal</Layout>
+            <Size>f,f</Size>
+            <ObjectName>ButtonGroupContainer</ObjectName>
+            <Children>
+              <Template src="skin:widgets/button-soft.xml">
+                <SetVariable name="group"><Variable name="section-group"/></SetVariable>
+                <SetVariable name="control">cue_default</SetVariable>
+                <SetVariable name="right-control">cue_gotoandstop</SetVariable>
+                <SetVariable name="indicator">cue_indicator</SetVariable>
+                <SetVariable name="symbol">cue</SetVariable>
+                <SetVariable name="colour-group">Cue</SetVariable>
+                <SetVariable name="size">35f,46f</SetVariable>
+              </Template>
+              <Template src="skin:widgets/button-soft.xml">
+                <SetVariable name="group"><Variable name="section-group"/></SetVariable>
+                <SetVariable name="control">beats_translate_curpos</SetVariable>
+                <SetVariable name="right-control">beats_translate_match_alignment</SetVariable>
+                <SetVariable name="indicator">beats_translate_curpos</SetVariable>
+                <SetVariable name="symbol">grid</SetVariable>
+                <SetVariable name="colour-group">Dark</SetVariable>
+                <SetVariable name="size">35f,46f</SetVariable>
+              </Template>
+            </Children>
+          </WidgetGroup>
+          <Template src="skin:widgets/buttongroup-bg.xml"/>
+        </Children>
+      </WidgetGroup>
+    </Children>
+  </WidgetGroup>
+</Template>

@@ -1,0 +1,85 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    A knob with label-button.
+  Variables:
+    group: The group to connect to.
+    control: The control rotary connect to.
+    label: Label text.
+    button_control: The control button with label connect to.
+-->
+<Template>
+  <WidgetGroup>
+    <Layout>stacked</Layout>
+    <Size>52f,me</Size>
+    <Children>
+      <SliderComposed>
+        <Handle>widgets/slider/slider-handle.svg</Handle>
+        <Slider></Slider>
+        <SizePolicy>min,me</SizePolicy>
+        <MinimumSize>52,70</MinimumSize>
+        <MaximumSize>52,-1</MaximumSize>
+        <Horizontal>false</Horizontal>
+        <Connection>
+          <ConfigKey>[<Variable name="group"/>],<Variable name="control"/></ConfigKey>
+        </Connection>
+      </SliderComposed>
+      <WidgetGroup>
+        <Layout>horizontal</Layout>
+        <ObjectName>VuMeterContainer</ObjectName>
+        <Children>
+          <WidgetGroup>
+            <Layout>stacked</Layout>
+            <Size>2f,me</Size>
+            <ObjectName>VuMeterBG</ObjectName>
+            <Children>
+              <StatusLight>
+                  <SizePolicy>min,me</SizePolicy>
+                  <MinimumSize>2,30</MinimumSize>
+                  <MaximumSize>2,-1</MaximumSize>
+                  <PathStatusLight scalemode="STRETCH">widgets/slider/slider-vu-peak.svg</PathStatusLight>
+                  <Connection>
+                      <ConfigKey>[<Variable name="group"/>],<Variable name="peak"/></ConfigKey>
+                  </Connection>
+              </StatusLight>
+              <VuMeter>
+                  <PathVu scalemode="STRETCH">widgets/slider/slider-vu-fill.svg</PathVu>
+                  <SizePolicy>min,me</SizePolicy>
+                  <MinimumSize>2,30</MinimumSize>
+                  <MaximumSize>2,-1</MaximumSize>
+                  <Horizontal>false</Horizontal>
+                  <PeakHoldSize>2</PeakHoldSize>
+                  <PeakHoldTime>200</PeakHoldTime>
+                  <PeakFallTime>20</PeakFallTime>
+                  <PeakFallStep>1</PeakFallStep>
+                  <Connection>
+                      <ConfigKey>[<Variable name="group"/>],<Variable name="vu"/></ConfigKey>
+                  </Connection>
+              </VuMeter>
+            </Children>
+          </WidgetGroup>
+        </Children>
+      </WidgetGroup>
+      <WidgetGroup>
+        <Layout>vertical</Layout>
+        <Children>
+          <WidgetGroup>
+            <ObjectName>SliderRangeStroke</ObjectName>
+            <Size>52f,18f</Size>
+            <Children></Children>
+          </WidgetGroup>
+          <WidgetGroup>
+            <ObjectName>ExpanderVertical</ObjectName>
+            <Size>1f,me</Size>
+            <Children></Children>
+          </WidgetGroup>
+          <WidgetGroup>
+            <ObjectName>SliderRangeStroke</ObjectName>
+            <Size>52f,18f</Size>
+            <Children></Children>
+          </WidgetGroup>
+        </Children>
+      </WidgetGroup>
+    </Children>
+  </WidgetGroup>
+</Template>

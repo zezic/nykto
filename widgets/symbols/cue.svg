@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg2"
+   version="1.1"
+   width="27"
+   viewBox="0 0 27 11"
+   height="11">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs16">
+    <linearGradient
+       osb:paint="solid"
+       id="Foreground">
+      <stop
+         id="stop3975"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:0.50196081;" />
+    </linearGradient>
+    <linearGradient
+       y2="663.78217"
+       x2="322.06186"
+       y1="663.78217"
+       x1="145.67999"
+       gradientTransform="translate(4.1493253,39.937526)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5668"
+       xlink:href="#Foreground" />
+    <linearGradient
+       y2="663.78217"
+       x2="322.06186"
+       y1="663.78217"
+       x1="145.67999"
+       gradientTransform="translate(4.1493253,39.937526)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient9910"
+       xlink:href="#Foreground" />
+    <linearGradient
+       xlink:href="#Foreground"
+       id="linearGradient9918"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(4.1493253,39.937526)"
+       x1="145.67999"
+       y1="663.78217"
+       x2="322.06186"
+       y2="663.78217" />
+  </defs>
+  <path
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto Bold';text-align:center;letter-spacing:0.20999999px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:0.50196078;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 25.030626,6.5295023 -4.048462,0 0,2.7929688 4.733276,0 0,1.5039059 -6.693725,0 0,-9.7753903 6.680297,0 0,1.5106201 -4.719848,0 0,2.4572754 4.048462,0 0,1.5106201 z"
+     id="path4127" />
+  <path
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto Bold';text-align:center;letter-spacing:0.20999999px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:0.50196078;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 17.931264,1.0509867 0,6.4855957 q 0,1.6784669 -1.067505,2.5579836 -1.067505,0.872803 -2.866822,0.872803 -1.785888,0 -2.846679,-0.872803 -1.060791,-0.8795167 -1.060791,-2.5579836 l 0,-6.4855957 1.967163,0 0,6.4855957 q 0,0.9869386 0.510254,1.4569092 0.510254,0.4699708 1.430053,0.4699708 0.939942,0 1.450196,-0.4699708 Q 15.9641,8.523521 15.9641,7.5365824 l 0,-6.4855957 1.967164,0 z"
+     id="path4125" />
+  <path
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:Roboto;-inkscape-font-specification:'Roboto Bold';text-align:center;letter-spacing:0.20999999px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:0.50196078;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 8.7305854,7.5970072 Q 8.6097358,9.2150493 7.6227972,10.094566 6.6425727,10.967369 4.856684,10.967369 q -1.7858887,0 -2.8198243,-1.1077884 Q 1.009638,8.7517925 1.009638,6.9121928 l 0,-1.9403076 q 0,-1.819458 1.0473634,-2.9406738 1.0473633,-1.12121586 2.7996826,-1.12121586 1.8127442,0 2.7661132,0.87951666 0.9533691,0.8795166 1.1145021,2.5378417 l -1.9537355,0 Q 6.6962835,3.367271 6.266596,2.8973002 5.8369085,2.4206156 4.856684,2.4206156 q -0.8996582,0 -1.3964843,0.7049561 Q 2.9633735,3.823814 2.9633735,4.9584574 l 0,1.9537354 q 0,1.1614991 0.4766846,1.8597412 0.4833984,0.6915284 1.4166259,0.6915284 0.9332276,0 1.3830567,-0.456543 0.449829,-0.456543 0.5303955,-1.4099122 l 1.9604492,0 z"
+     id="path4120" />
+</svg>

@@ -1,0 +1,35 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    A mixer.
+-->
+<Template>
+  <WidgetGroup>
+    <Layout>vertical</Layout>
+    <Size>f,f</Size>
+    <ObjectName>Mixer</ObjectName>
+    <Children>
+      <WidgetGroup>
+        <Layout>horizontal</Layout>
+        <Size>f,f</Size>
+        <ObjectName>MixerPart</ObjectName>
+        <Children>
+          <Template src="skin:widgets/mixer-section-eq.xml">
+            <SetVariable name="section-group">Channel1</SetVariable>
+          </Template>
+          <Template src="skin:widgets/mixer-section-level.xml">
+            <SetVariable name="section-group">Channel1</SetVariable>
+          </Template>
+          <Template src="skin:widgets/mixer-section-level.xml">
+            <SetVariable name="section-group">Channel2</SetVariable>
+          </Template>
+          <Template src="skin:widgets/mixer-section-eq.xml">
+            <SetVariable name="section-group">Channel2</SetVariable>
+          </Template>
+        </Children>
+      </WidgetGroup>
+      <Template src="skin:widgets/mixer-section-xfader.xml">
+      </Template>
+    </Children>
+  </WidgetGroup>
+</Template>

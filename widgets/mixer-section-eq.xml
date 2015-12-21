@@ -1,0 +1,58 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    A mixer EQ+Filter section.
+  Variables:
+    section-group: The group to connect to.
+-->
+<Template>
+    <WidgetGroup>
+      <Layout>vertical</Layout>
+      <Size>f,f</Size>
+      <ObjectName>MixerFilterPart</ObjectName>
+      <Children>
+        <WidgetGroup>
+          <Layout>vertical</Layout>
+          <Size>f,f</Size>
+          <ObjectName>ContainerHigh</ObjectName>
+          <Children>
+            <Template src="skin:widgets/knob-yellow.xml">
+              <SetVariable name="group">QuickEffectRack1_[<Variable name="section-group"/>]</SetVariable>
+              <SetVariable name="control">super1</SetVariable>
+              <SetVariable name="button_group">QuickEffectRack1_[<Variable name="section-group"/>]_Effect1</SetVariable>
+              <SetVariable name="button_control">enabled</SetVariable>
+              <SetVariable name="label">Filter</SetVariable>
+            </Template>
+          </Children>
+        </WidgetGroup>
+        <WidgetGroup>
+          <Layout>vertical</Layout>
+          <Size>f,f</Size>
+          <ObjectName>ContainerTopEQ</ObjectName>
+          <Children>
+            <Template src="skin:widgets/knob.xml">
+              <SetVariable name="group">EqualizerRack1_[<Variable name="section-group"/>]_Effect1</SetVariable>
+              <SetVariable name="control">parameter3</SetVariable>
+              <SetVariable name="button_group">EqualizerRack1_[<Variable name="section-group"/>]_Effect1</SetVariable>
+              <SetVariable name="button_control">button_parameter3</SetVariable>
+              <SetVariable name="label">High</SetVariable>
+            </Template>
+            <Template src="skin:widgets/knob.xml">
+              <SetVariable name="group">EqualizerRack1_[<Variable name="section-group"/>]_Effect1</SetVariable>
+              <SetVariable name="control">parameter2</SetVariable>
+              <SetVariable name="button_group">EqualizerRack1_[<Variable name="section-group"/>]_Effect1</SetVariable>
+              <SetVariable name="button_control">button_parameter2</SetVariable>
+              <SetVariable name="label">Mid</SetVariable>
+            </Template>
+            <Template src="skin:widgets/knob.xml">
+              <SetVariable name="group">EqualizerRack1_[<Variable name="section-group"/>]_Effect1</SetVariable>
+              <SetVariable name="control">parameter1</SetVariable>
+              <SetVariable name="button_group">EqualizerRack1_[<Variable name="section-group"/>]_Effect1</SetVariable>
+              <SetVariable name="button_control">button_parameter1</SetVariable>
+              <SetVariable name="label">Low</SetVariable>
+            </Template>
+          </Children>
+        </WidgetGroup>
+      </Children>
+    </WidgetGroup>
+</Template>

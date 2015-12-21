@@ -1,0 +1,548 @@
+/*
+  Nykto , Skin for Mixxx 1.12.x
+  www.mixxx.org
+  Copyright (C) 2015 Sergey Ukolov <mail@zezic.ru>
+  This file is part of the "Nykto" Skin for Mixxx
+  "Nykto" is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported license.
+  http://creativecommons.org/licenses/by-sa/3.0/
+
+  Mixxx skin documentation:
+  http://mixxx.org/wiki/doku.php/creating_skins
+
+  List of controls:
+  http://mixxx.org/wiki/doku.php/mixxxcontrols
+
+  Qt Style Sheets documentation:
+  http://doc.qt.io/qt-4.8/stylesheet-examples.html
+
+/*******************************************************************************
+ ** LIBRARY ********************************************************************
+ *******************************************************************************/
+
+/* library table */
+QTableView {
+  color: #A9A9A9;
+  background-color: #1F1F1F;
+  alternate-background-color: #1A1A1A;
+  selection-background-color: #006596;
+  selection-color: #D6D6D6;
+  qproperty-alternatingRowColors: 1;
+  border: 1px solid #1A1A1A;
+  gridline-color: red;
+}
+
+/* checkbox in library "Played" column */
+QTableView::indicator {
+  width: 12px;
+  height: 12px;
+}
+
+QTableView::indicator:checked {
+  background: url(skin:/style/style_checkbox_checked.png);
+}
+
+QTableView::indicator:unchecked {
+  background: url(skin:/style/style_checkbox_unchecked.png);
+}
+
+/* BPM lock icon in the library "BPM" column. */
+#LibraryBPMButton::indicator:checked {
+  image: url(:/images/library/ic_library_checked.png);
+}
+
+#LibraryBPMButton::indicator:unchecked {
+  image: url(:/images/library/ic_library_unchecked.png);
+}
+
+/* button in library "Preview" column */
+QPushButton#LibraryPreviewButton {
+  width: 23px;
+  height: 12px;
+  background: transparent;
+  border: none;
+}
+
+QPushButton#LibraryPreviewButton:!checked {
+  image: url(skin:/style/style_library_preview_play.png);
+}
+
+QPushButton#LibraryPreviewButton:checked {
+  image: url(skin:/style/style_library_preview_pause.png);
+}
+
+/* library header row */
+QHeaderView {
+  color: #7C7C7C;
+  background: #1A1A1A;
+  border-bottom: 1px solid #141414;
+}
+
+QHeaderView::section {
+  height: 18px;
+  font-size: 13px/15px;
+  font-weight: normal;
+  padding: 2px;
+  background: #1A1A1A;
+  border-top: none;
+  border-bottom: 1px solid #141414;
+  border-left: 1px solid #141414;
+  border-right: none;
+}
+
+QHeaderView::section:selected {
+  font-size: 13px/15px;
+  font-weight: bold;
+  padding: 2px;
+  background: #1A1A1A;
+  border-top: none;
+  border-bottom: 1px solid #141414;
+  border-left: 1px solid #141414;
+  border-right: none;
+}
+
+QHeaderView::up-arrow {
+  image: url(skin:/style/style_sort_up.svg)
+}
+
+QHeaderView::down-arrow {
+  image: url(skin:/style/style_sort_down.svg)
+}
+
+/* library search bar */
+WSearchLineEdit {
+  margin: 0px 0px 0px 1px;
+  padding: 2px;
+  border: 1px solid #1A1A1A;
+  background-color: #4B4B4B;
+  color: #D6D6D6;
+}
+
+WSearchLineEdit:focus {
+  margin: 2px 0px 0px 1px;
+  padding: 2px;
+  border: 1px solid #FF6600;
+  background-color: #4B4B4B;
+  color: #D6D6D6;
+  selection-color: #222222;
+}
+
+/* library preview deck */
+#PreviewDeckContainer {
+  margin: 4px 0px 0px 0px;
+  background-color: #1F1F1F;
+  border: 1px solid #1A1A1A;
+  qproperty-layoutSpacing: 2;
+}
+
+#PreviewDeckTextRow WLabel {
+  padding: 2px;
+  color: #A9A9A9;
+  font-size: 12px/14px;
+  text-transform: none;
+}
+
+#PreviewDeckVisualRow {
+  padding: 2px;
+  border-top: 1px solid #1A1A1A;
+}
+
+#PreviewDeckEjectButton[value="0"]:!hover {
+  background: none;
+  border: none;
+}
+
+/* Spacing between treeview and preview deck/search bar */
+QTreeView {
+  margin: 4px 0px 0px 0px;
+}
+
+/* sidebar, as well as root items for playlists, crates, and history */
+QTextBrowser, QTreeView {
+  color: #A9A9A9;
+  background-color: #1F1F1F;
+  selection-background-color: #006596;
+  selection-color: #D6D6D6;
+  border: 1px solid #1A1A1A;
+  gridline-color: red;
+  /* Suppresses that selected sidebar item's branch indicator shows wrong color
+     when out of focus, see lp:880588 */
+  show-decoration-selected: 1;
+}
+/* triangle for closed/opened branches in treeview */
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings {
+  border-image: none; image: url(skin:/style/style_branch_closed.png);
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings {
+  border-image: none; image: url(skin:/style/style_branch_open.png);
+}
+
+/* QSplitter between LibrarySidebar and Library */
+QSplitter#LibrarySplitter::handle {
+  image: url(skin:/style/style_handle_horizontal_unchecked.svg);
+  background: none;
+}
+
+QSplitter#LibrarySplitter::handle:pressed {
+  image: url(skin:/style/style_handle_horizontal_checked.svg);
+  background: none;
+}
+
+QSplitter#LibrarySplitter::handle:horizontal {
+  width: 6px;
+}
+
+QSplitter#LibrarySplitter::handle:vertical {
+  height: 6px;
+}
+
+/* QSplitter between LibrarySidebar and CoverArt */
+QSplitter#LibraryCoverArtSplitter::handle {
+  image: url(skin:/style/style_handle_vertical_unchecked.svg);
+  background: none;
+}
+
+QSplitter#LibraryCoverArtSplitter::handle:pressed {
+  image: url(skin:/style/style_handle_vertical_checked.svg);
+  background: none;
+}
+
+QSplitter#LibraryCoverArtSplitter::handle:horizontal {
+  width: 6px;
+}
+
+QSplitter#LibraryCoverArtSplitter::handle:vertical {
+  height: 6px;
+}
+
+/* library cover art widget */
+#LibraryCoverArt {
+  padding: 8px 4px 4px 4px;
+  background-color: #1F1F1F;
+  border: 1px solid #1A1A1A;
+}
+/* transition time in Auto DJ tab */
+WLibrary QSpinBox {
+  min-height: 20px;
+  max-height: 20px;
+  min-width: 40px;
+  max-width: 40px;
+}
+
+WLibrary QSpinBox:editable {
+  background: transparent;
+  color:#A9A9A9;
+}
+
+/* Extra declaration for QRadionButton otherwise it shows up with wrong colors in Linux with Gnome */
+WLibrary QLabel, WLibrary QRadioButton {
+  /* same as QTreeview */
+  color: #A9A9A9;
+  margin: 0px 10px 0px 0px;
+}
+
+WLibrary QRadioButton::indicator {
+  margin: 0px 5px 0px 2px;
+  width: 18px;
+  height: 18px;
+}
+
+WLibrary QRadioButton::indicator:checked {
+  background: url(skin:/icon/ic_radio_button_on_18px.svg);
+}
+
+WLibrary QRadioButton::indicator:unchecked {
+  background: url(skin:/icon/ic_radio_button_off_18px.svg);
+}
+/* buttons in library (in hierarchical order of appearance)
+   Style them just as the other regular buttons */
+#DlgMissing > QPushButton,
+#DlgHidden > QPushButton,
+#DlgAutoDJ > QPushButton,
+#DlgRecording > QPushButton,
+#DlgAnalysis > QPushButton {
+  padding: 4px;
+  color: #A3A3A3;
+  background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0,
+                                    stop: 0 #4B4B4B,
+                                    stop: 1 #4B4B4B);
+  border: 1px solid #4B4B4B;
+  border-radius: 2px;
+  outline: none;
+}
+
+#DlgMissing > QPushButton:!enabled,
+#DlgHidden > QPushButton:!enabled,
+#DlgAutoDJ > QPushButton:!enabled,
+#DlgAnalysis > QPushButton:!enabled {
+  /* buttons in "disabled" (not click-able) state. They are nearly invisible
+     by default QT palette, so style accordingly */
+  padding: 4px;
+  color: #494949; /* Default #A3A3A3 -90L HSL*/
+  background-color: qlineargradient(spread:pad,
+                                    x1:0, y1:0, x2:1, y2:0,
+                                    stop:0 rgba(95, 95, 95, 127),
+                                    stop:1 rgba(95, 95, 95, 127));
+                                    /* 50% #5F5F5F = RGBA#5F5F5F7F */
+  border: 0px solid #5F5F5F;
+  border-radius: 2px;
+  outline: none;
+}
+
+#DlgMissing > QPushButton:hover,
+#DlgHidden > QPushButton:hover,
+#DlgAutoDJ > QPushButton:hover,
+#DlgRecording > QPushButton:hover,
+#DlgAnalysis > QPushButton:hover {
+  padding: 4px;
+  color: #B7B7B7;
+  background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0,
+                                    stop: 0 #5F5F5F,
+                                    stop: 1 #5F5F5F);
+  border: 0px solid #5F5F5F;
+  border-radius: 2px;
+  outline: none;
+}
+
+#DlgAutoDJ > QPushButton:checked,
+#DlgRecording > QPushButton:checked,
+#DlgAnalysis > QPushButton:checked {
+  /* checkbuttons in active state */
+  padding: 4px;
+  color: #FDFDFD;
+  background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0,
+                                    stop: 0 #006596,
+                                    stop: 1 #006596);
+  border: 0px solid #006596;
+  border-radius: 2px;
+  outline: none;
+}
+
+#DlgAutoDJ > QPushButton:checked:hover,
+#DlgRecording > QPushButton:checked:hover,
+#DlgAnalysis > QPushButton:checked:hover {
+  /* checkbuttons hovered over in "active" state */
+  padding: 4px;
+  color: #FDFDFD;
+  background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0,
+                                    stop: 0 #0080BE,
+                                    stop: 1 #0080BE);
+  border: 0px solid #0080BE;
+  border-radius: 2px;
+  outline: none;
+}
+
+#DlgMissing > QPushButton:pressed,
+#DlgHidden > QPushButton:pressed,
+#DlgAutoDJ > QPushButton:pressed,
+#DlgAnalysis > QPushButton:pressed {
+  /* pushbuttons in "down" state */
+  padding: 4px;
+  color: #FDFDFD;
+  background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0,
+                                    stop: 0 #006596,
+                                    stop: 1 #006596);
+  border: 0px solid #006596;
+  border-radius: 2px;
+  outline: none;
+}
+
+/*******************************************************************************
+ ** END LIBRARY *****************************************************************
+ *******************************************************************************/
+
+#Mixxx {
+  background-color: #000;
+  font-family: "Roboto";
+  qproperty-layoutSpacing: 2;
+}
+
+WWidget, QLabel {
+  font-family: "Roboto";
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+QToolTip {
+    background-color: #222222;
+    color: #CCCCCC;
+    border: 1px solid #CCCCCC;
+}
+
+#KnobBackgroundBig {
+  background: url(skin:/widgets/knob/big/bg.svg);
+}
+
+#UnderknobButton {
+  border-radius: 2px;
+  margin-top: 1px;
+  margin-bottom: 3px;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 9px;
+}
+#UnderknobButton[value="0"] {
+  background-color: rgba(0,0,0,32%);
+  color: white;
+}
+#UnderknobButton[value="1"] {
+  background-color: white;
+  color: black;
+}
+
+#UnderknobButtonYellow {
+  border-radius: 2px;
+  margin-top: 1px;
+  margin-bottom: 3px;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 9px;
+}
+#UnderknobButtonYellow[value="0"] {
+  background-color: rgba(0,0,0,32%);
+  color: white;
+}
+#UnderknobButtonYellow[value="1"] {
+  background-color: #ffc000;
+  color: black;
+}
+
+#StiffButtonLabel {
+  color: white;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 9px;
+}
+#StiffButtonLabelPressed {
+  color: black;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 9px;
+}
+#StiffButtonLabelShadow {
+  color: black;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 9px;
+  padding-bottom: 2px;
+}
+#ContainerTop {
+  background-color: #505050;
+  border: 1px solid rgba(255,255,255,6%);
+  border-top: 1px solid rgba(255,255,255,10%);
+  padding: 3px;
+  padding-bottom: 1px;
+}
+#ContainerTopEQ {
+  background-color: #505050;
+  border: 1px solid rgba(255,255,255,6%);
+  border-top: 1px solid rgba(255,255,255,10%);
+  padding: 1px 3px;
+}
+#ContainerHigh {
+  background-color: #404040;
+  border: 1px solid rgba(255,255,255,6%);
+  border-top: 1px solid rgba(255,255,255,10%);
+  border-bottom: 0;
+  padding: 1px 3px;
+}
+#ContainerMid {
+  background-color: #333333;
+}
+#SliderRangeStroke {
+  background: url(skin:/widgets/slider/slider-range-stroke.svg);
+}
+#orange {
+  background-color: #ff7700;
+}
+#VuMeterBG {
+  background-color: rgba(255,255,255,9%);
+}
+#VuMeterContainer {
+  padding: 4px 0px;
+}
+#XFaderMeterBG {
+  background-color: qlineargradient(x1: 0.495, y1: 0, x2: 0.5, y2: 0,
+                                    stop: 0 #ffffff,
+                                    stop: 1 #454545);
+}
+#XFaderMeterContainer {
+  padding: 1px 8px 0px;
+}
+#DeckLevels {
+  qproperty-layoutSpacing: 1;
+}
+#MixerPart {
+  qproperty-layoutSpacing: 1;
+}
+#MixerFilterPart {
+  qproperty-layoutSpacing: 1;
+}
+#Mixer {
+  qproperty-layoutSpacing: 1;
+}
+#XFader {
+  border: 1px solid rgba(255,255,255,6%);
+  border-bottom: 1px solid rgba(255,255,255,6%);
+  border-top: 0;
+  padding: 2px 0px;
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.06,
+                                    stop: 0 #272727,
+                                    stop: 1 #333333);
+}
+#XFaderRangeStroke {
+  background: url(skin:/widgets/slider/xfader-range-stroke.svg);
+}
+#DeckTransport {
+  background-color: #404040;
+  border: 1px solid rgba(255,255,255,6%);
+  border-top: 1px solid rgba(255,255,255,10%);
+  padding: 0px 0px;
+  qproperty-layoutSpacing: 8;
+}
+#ButtonGroupBG {
+  padding: 4px 0px;
+}
+#ButtonGroupBGRecess {
+  background-color: rgba(0,0,0,63%);
+  border-radius: 4px;
+}
+#TestButtonBGShadow {
+  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                    stop: 0 rgba(0,0,0,50%),
+                                    stop: 1 rgba(0,0,0,0%));
+}
+#TestButtonBGBody {
+  border-radius: 2px;
+  background-color: rgba(255,255,255,13%);
+  padding: 2px;
+}
+#TestButtonBGBodyTransport {
+  border-radius: 2px;
+  background: qradialgradient(cx:0.5, cy:0.5, radius: 1,
+                fx:0.5, fy:0.5, stop:0 #44CDFF, stop:1 #00BAFF);
+  padding: 2px;
+}
+#TestButtonBGBodyCue {
+  border-radius: 2px;
+  background: qradialgradient(cx:0.5, cy:0.5, radius: 1,
+                fx:0.5, fy:0.5, stop:0 #ffcb44, stop:1 #ffb800);
+  padding: 2px;
+}
+#TestButtonBGBodyDark {
+  border-radius: 2px;
+  background-color: rgba(255,255,255,6%);
+  padding: 2px;
+}
+#TestButtonBGBodyOverlay {
+  padding: 2px;
+}
+#TestButtonBGBodyInner {
+  background-color: rgba(0,0,0,24%);
+}
+#ButtonGroupContainer {
+  qproperty-layoutSpacing: 2;
+  padding: 0px 2px;
+}

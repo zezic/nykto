@@ -1,0 +1,155 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    A button with symbol.
+  Variables:
+    group: The group to connect to.
+    control: The control to connect to.
+    right-control: The right button control to connect to.
+    indicator: The indicator control to connect to.
+    symbol: Symbol filename base.
+    colour-group: The colour group.
+    size: Size =)
+-->
+<Template>
+  <WidgetGroup>
+    <Layout>stacked</Layout>
+    <Size><Variable name="size"/></Size>
+    <ObjectName>TestButton</ObjectName>
+    <Children>
+      <PushButton>
+        <ObjectName>PlayToggle</ObjectName>
+        <SizePolicy>me,me</SizePolicy>
+        <NumberStates>2</NumberStates>
+        <LeftClickIsPushButton>false</LeftClickIsPushButton>
+        <RightClickIsPushButton>false</RightClickIsPushButton>
+        <State>
+          <Number>0</Number>
+        </State>
+        <State>
+          <Number>1</Number>
+        </State>
+        <Connection>
+          <ConfigKey>[<Variable name="group"/>],<Variable name="control"/></ConfigKey>
+          <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+          <ButtonState>LeftButton</ButtonState>
+          <ConnectValueToWidget>false</ConnectValueToWidget>
+        </Connection>
+        <Connection>
+          <ConfigKey>[<Variable name="group"/>],<Variable name="right-control"/></ConfigKey>
+          <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+          <ButtonState>RightButton</ButtonState>
+          <ConnectValueToWidget>false</ConnectValueToWidget>
+        </Connection>
+        <Connection>
+          <ConfigKey>[<Variable name="group"/>],<Variable name="indicator"/></ConfigKey>
+          <ConnectValueFromWidget>false</ConnectValueFromWidget>
+        </Connection>
+      </PushButton>
+      <WidgetGroup>
+        <Layout>vertical</Layout>
+        <Size>me,me</Size>
+        <ObjectName>TestButtonBG</ObjectName>
+        <Children>
+          <WidgetGroup>
+            <Layout>vertical</Layout>
+            <Size>me,6f</Size>
+            <ObjectName>TestButtonBGSpacer</ObjectName>
+            <Children>
+
+            </Children>
+          </WidgetGroup>
+
+          <WidgetGroup>
+            <Layout>stacked</Layout>
+            <Size>me,me</Size>
+            <ObjectName>TestButtonBGBodyContainer</ObjectName>
+            <Children>
+              <WidgetGroup>
+                <Layout>vertical</Layout>
+                <Size>me,me</Size>
+                <ObjectName>TestButtonBGBodyOverlay</ObjectName>
+                <Children>
+                  <WidgetGroup>
+                    <Layout>vertical</Layout>
+                    <Size>me,me</Size>
+                    <ObjectName>TestButtonBGBodyInner</ObjectName>
+                    <Children>
+                    </Children>
+                  </WidgetGroup>
+                </Children>
+              </WidgetGroup>
+              <WidgetGroup>
+                <Layout>vertical</Layout>
+                <Size>me,me</Size>
+                <ObjectName>TestButtonBGBody<Variable name="colour-group"/></ObjectName>
+                <Children>
+                  <PushButton>
+                    <SizePolicy>f,f</SizePolicy>
+                    <NumberStates>1</NumberStates>
+                    <State>
+                      <Number>0</Number>
+                      <Unpressed scalemode="FIXED">widgets/symbols/<Variable name="symbol"/>-black.svg</Unpressed>
+                    </State>
+                  </PushButton>
+                </Children>
+                <Connection>
+                  <ConfigKey>[<Variable name="group"/>],<Variable name="indicator"/></ConfigKey>
+                  <BindProperty>visible</BindProperty>
+                </Connection>
+              </WidgetGroup>
+              <WidgetGroup>
+                <Layout>vertical</Layout>
+                <Size>me,me</Size>
+                <ObjectName>TestButtonBGBody</ObjectName>
+                <Children>
+                  <PushButton>
+                    <SizePolicy>f,f</SizePolicy>
+                    <NumberStates>1</NumberStates>
+                    <State>
+                      <Number>0</Number>
+                      <Unpressed scalemode="FIXED">widgets/symbols/<Variable name="symbol"/>.svg</Unpressed>
+                    </State>
+                  </PushButton>
+                </Children>
+                <Connection>
+                  <ConfigKey>[<Variable name="group"/>],<Variable name="indicator"/></ConfigKey>
+                  <BindProperty>visible</BindProperty>
+                  <Transform>
+                    <Not/>
+                  </Transform>
+                </Connection>
+              </WidgetGroup>
+            </Children>
+          </WidgetGroup>
+
+          <WidgetGroup>
+            <Layout>vertical</Layout>
+            <Size>me,6f</Size>
+            <ObjectName>TestButtonBGShadow</ObjectName>
+            <Children>
+            </Children>
+            <Connection>
+              <ConfigKey>[<Variable name="group"/>],<Variable name="indicator"/></ConfigKey>
+              <BindProperty>visible</BindProperty>
+              <Transform>
+                <Not/>
+              </Transform>
+            </Connection>
+          </WidgetGroup>
+          <WidgetGroup>
+            <Layout>vertical</Layout>
+            <Size>me,6f</Size>
+            <ObjectName>TestButtonBGNoShadow</ObjectName>
+            <Children>
+            </Children>
+            <Connection>
+              <ConfigKey>[<Variable name="group"/>],<Variable name="indicator"/></ConfigKey>
+              <BindProperty>visible</BindProperty>
+            </Connection>
+          </WidgetGroup>
+        </Children>
+      </WidgetGroup>
+    </Children>
+  </WidgetGroup>
+</Template>

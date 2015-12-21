@@ -1,0 +1,112 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    A button with label.
+  Variables:
+    group: The group to connect to.
+    control: The control to connect to.
+    label: Label text.
+-->
+<Template>
+  <WidgetGroup>
+    <Layout>stacked</Layout>
+    <Size>44f,19f</Size>
+    <Children>
+      <PushButton>
+        <ObjectName>StiffButton</ObjectName>
+        <Size>44f,19f</Size>
+        <Pos>0,36</Pos>
+        <NumberStates>2</NumberStates>
+        <RightClickIsPushButton>true</RightClickIsPushButton>
+        <State>
+          <Number>0</Number>
+          <Pressed>widgets/button/stiff/overlay.svg</Pressed>
+          <Unpressed></Unpressed>
+        </State>
+        <State>
+          <Number>1</Number>
+          <Pressed>widgets/button/stiff/overlay.svg</Pressed>
+          <Unpressed></Unpressed>
+        </State>
+        <Connection>
+          <ConfigKey>[<Variable name="group"/>],<Variable name="control"/></ConfigKey>
+          <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+          <ButtonState>LeftButton</ButtonState>
+        </Connection>
+      </PushButton>
+      <WidgetGroup>
+        <Layout>stacked</Layout>
+        <Children>
+          <WidgetGroup>
+            <Layout>vertical</Layout>
+            <Children>
+              <Label>
+                <ObjectName>StiffButtonLabel</ObjectName>
+                <Size>f,f</Size>
+                <Text><Variable name="label"/></Text>
+              </Label>
+            </Children>
+          </WidgetGroup>
+          <WidgetGroup>
+            <Layout>vertical</Layout>
+            <Children>
+              <Label>
+                <ObjectName>StiffButtonLabelShadow</ObjectName>
+                <Size>f,f</Size>
+                <Text><Variable name="label"/></Text>
+              </Label>
+            </Children>
+          </WidgetGroup>
+        </Children>
+        <Connection>
+          <ConfigKey>[<Variable name="group"/>],<Variable name="control"/></ConfigKey>
+          <BindProperty>visible</BindProperty>
+          <Transform>
+            <Not/>
+          </Transform>
+        </Connection>
+      </WidgetGroup>
+      <WidgetGroup>
+        <Layout>stacked</Layout>
+        <Children>
+          <WidgetGroup>
+            <Layout>vertical</Layout>
+            <Children>
+              <Label>
+                <ObjectName>StiffButtonLabelPressed</ObjectName>
+                <Size>f,f</Size>
+                <Text><Variable name="label"/></Text>
+              </Label>
+            </Children>
+          </WidgetGroup>
+        </Children>
+        <Connection>
+          <ConfigKey>[<Variable name="group"/>],<Variable name="control"/></ConfigKey>
+          <BindProperty>visible</BindProperty>
+        </Connection>
+      </WidgetGroup>
+      <PushButton>
+        <ObjectName>StiffButton</ObjectName>
+        <Size>44f,19f</Size>
+        <Pos>0,36</Pos>
+        <NumberStates>2</NumberStates>
+        <RightClickIsPushButton>true</RightClickIsPushButton>
+        <State>
+          <Number>0</Number>
+          <Pressed>widgets/button/stiff/bg.svg</Pressed>
+          <Unpressed>widgets/button/stiff/bg.svg</Unpressed>
+        </State>
+        <State>
+          <Number>1</Number>
+          <Pressed>widgets/button/stiff/bg_pressed_white.svg</Pressed>
+          <Unpressed>widgets/button/stiff/bg_pressed_white.svg</Unpressed>
+        </State>
+        <Connection>
+          <ConfigKey>[<Variable name="group"/>],<Variable name="control"/></ConfigKey>
+          <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+          <ButtonState>LeftButton</ButtonState>
+        </Connection>
+      </PushButton>
+    </Children>
+  </WidgetGroup>
+</Template>

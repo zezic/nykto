@@ -1,0 +1,21 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    A ButtonGroupBG.
+-->
+<Template>
+  <WidgetGroup>
+    <Layout>stacked</Layout>
+    <Size>me,me</Size>
+    <ObjectName>ButtonGroupBG</ObjectName>
+    <Children>
+      <WidgetGroup>
+        <Layout>stacked</Layout>
+        <Size>me,me</Size>
+        <ObjectName>ButtonGroupBGRecess</ObjectName>
+        <Children>
+        </Children>
+      </WidgetGroup>
+    </Children>
+  </WidgetGroup>
+</Template>

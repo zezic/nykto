@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id="svg8274" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" height="19" width="44" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44 19" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs id="defs8276">
+  <linearGradient id="linearGradient5991" y2="431.86" xlink:href="#GeneralRecess" gradientUnits="userSpaceOnUse" x2="790.5" gradientTransform="translate(-746 610)" y1="431.86" x1="745.5"/>
+  <linearGradient id="GeneralRecess" gradientTransform="matrix(.90909 0 0 .90909 -407.82 -427.69)" osb:paint="solid">
+   <stop id="stop4220" stop-opacity=".62745" offset="0"/>
+  </linearGradient>
+  <linearGradient id="linearGradient5993" y2="439.36" gradientUnits="userSpaceOnUse" x2="760" gradientTransform="translate(-746 610)" y1="424.36" x1="760">
+   <stop id="stop17061" stop-color="#fff" stop-opacity=".062745" offset="0"/>
+   <stop id="stop17063" stop-color="#404040" stop-opacity=".50196" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient5995" y2="424.86" gradientUnits="userSpaceOnUse" x2="789" gradientTransform="translate(-746 610)" y1="424.86" x1="747">
+   <stop id="stop7254" stop-color="#fff" stop-opacity=".094118" offset="0"/>
+  </linearGradient>
+  <linearGradient id="linearGradient5997" y2="424.86" xlink:href="#GeneralRecess" gradientUnits="userSpaceOnUse" x2="789" gradientTransform="translate(-746 624)" y1="424.86" x1="747"/>
+  <linearGradient id="linearGradient5999" y2="442.36" gradientUnits="userSpaceOnUse" x2="760" gradientTransform="translate(-746 610)" y1="439.36" x1="760">
+   <stop id="stop4305" stop-opacity=".62745" offset="0"/>
+   <stop id="stop4307" stop-opacity="0" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g id="layer1" transform="translate(0 -1033.4)">
+  <rect id="rect5977" style="color:#000000" height="16" width="43" stroke="url(#linearGradient5991)" y="1033.9" x=".5" fill="none"/>
+  <g>
+   <rect id="rect5979" style="color:#000000" height="15" width="42" y="1034.4" x="1" fill="url(#linearGradient5993)"/>
+   <rect id="rect5981" style="color:#000000" height="1" width="42" y="1034.4" x="1" fill="url(#linearGradient5995)"/>
+   <rect id="rect5983" style="color:#000000" height="1" width="42" y="1048.4" x="1" fill="url(#linearGradient5997)"/>
+   <rect id="rect5985" style="color:#000000" height="3" width="42" y="1049.4" x="1" fill="url(#linearGradient5999)"/>
+  </g>
+ </g>
+</svg>
