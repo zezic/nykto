@@ -1,0 +1,8 @@
+mixin group(name, layout, size)
+  WidgetGroup
+    ObjectName!= name
+    Layout!= layout
+    Size!= size
+    if block
+      Children
+        block

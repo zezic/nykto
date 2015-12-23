@@ -9,20 +9,26 @@
     <license>Creative Commons Attribution, Share-Alike 3.0 Unported</license>
     <attributes>
       <!-- Init number of available widgets-->
-      <attribute config_key="[Master],num_decks">4</attribute>
-      <attribute config_key="[Master],num_samplers">16</attribute>
-      <attribute config_key="[Master],num_preview_decks">1</attribute>
+        <attribute config_key="[Master],num_decks">4</attribute>
+        <attribute config_key="[Master],num_samplers">16</attribute>
+        <attribute config_key="[Master],num_preview_decks">1</attribute>
       <!-- Init elements visibility-->
-      <attribute persist="true" config_key="[Spinny1],show_spinny">1</attribute>
-      <attribute persist="true" config_key="[Spinny2],show_spinny">1</attribute>
-      <attribute persist="true" config_key="[Spinny3],show_spinny">1</attribute>
-      <attribute persist="true" config_key="[Spinny4],show_spinny">1</attribute>
-      <attribute persist="true" config_key="[Samplers],show_samplers">0</attribute>
-      <attribute persist="true" config_key="[Microphone],show_microphone">0</attribute>
-      <attribute persist="true" config_key="[Vinylcontrol],show_vinylcontrol">0</attribute>
-      <attribute persist="true" config_key="[PreviewDeck],show_previewdeck">0</attribute>
-      <attribute persist="true" config_key="[Library],show_library">1</attribute>
-      <attribute persist="true" config_key="[Library],show_coverart">0</attribute>
+        <attribute persist="true" config_key="[Spinny1],show_spinny">1</attribute>
+        <attribute persist="true" config_key="[Spinny2],show_spinny">1</attribute>
+        <attribute persist="true" config_key="[Spinny3],show_spinny">1</attribute>
+        <attribute persist="true" config_key="[Spinny4],show_spinny">1</attribute>
+        <attribute persist="true" config_key="[Samplers],show_samplers">0</attribute>
+        <attribute persist="true" config_key="[Microphone],show_microphone">0</attribute>
+        <attribute persist="true" config_key="[Vinylcontrol],show_vinylcontrol">0</attribute>
+        <attribute persist="true" config_key="[PreviewDeck],show_previewdeck">0</attribute>
+        <attribute persist="true" config_key="[Library],show_library">1</attribute>
+        <attribute persist="true" config_key="[Library],show_coverart">0</attribute>
+        <attribute config_key="[Int],0">0</attribute>
+        <attribute config_key="[Int],1">1</attribute>
+        <attribute config_key="[Int],2">2</attribute>
+        <attribute config_key="[Int],3">3</attribute>
+        <attribute config_key="[Int],4">4</attribute>
+        <attribute config_key="[Int],5">5</attribute>
     </attributes>
   </manifest>
   <ObjectName>Mixxx</ObjectName>
@@ -30,12 +36,17 @@
   <MinimumSize>-1,-1</MinimumSize>
   <Layout>horizontal</Layout>
   <Children>
-    <Template src="skin:widgets/deck.xml">
-      <SetVariable name="group">Channel1</SetVariable>
-    </Template>
-    <Template src="skin:widgets/mixer.xml"></Template>
-    <Template src="skin:widgets/deck.xml">
-      <SetVariable name="group">Channel2</SetVariable>
-    </Template>
+        <WidgetGroup>
+          <ObjectName>Mixer</ObjectName>
+          <Layout>vertical</Layout>
+          <Size>f,f</Size>
+          <Children>
+              <WidgetGroup>
+                <ObjectName>Mixer</ObjectName>
+                <Layout>vertical</Layout>
+                <Size>f,f</Size>
+              </WidgetGroup>
+          </Children>
+        </WidgetGroup>
   </Children>
 </skin>

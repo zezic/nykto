@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="10"
+   height="10"
+   id="svg17712"
+   version="1.1"
+   inkscape:version="0.91+devel r"
+   sodipodi:docname="plus-black.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview34"
+     showgrid="false"
+     inkscape:zoom="23.6"
+     inkscape:cx="5"
+     inkscape:cy="5"
+     inkscape:window-x="0"
+     inkscape:window-y="22"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg17712" />
+  <defs
+     id="defs17714">
+    <linearGradient
+       xlink:href="#Foreground"
+       id="linearGradient6218"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,0.26458333,0.26458333,0,13.229168,-99.48332)"
+       x1="376"
+       y1="-46.5"
+       x2="392"
+       y2="-46.5" />
+    <linearGradient
+       id="Foreground"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3975" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#Foreground"
+       id="linearGradient6218-7"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,0.26458333,0.26458333,0,13.229168,-99.48334)"
+       x1="376"
+       y1="-46.5"
+       x2="392"
+       y2="-46.5" />
+    <linearGradient
+       y2="531.36218"
+       x2="545"
+       y1="531.36218"
+       x1="533"
+       gradientTransform="translate(-534,-526.36216)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient6165"
+       xlink:href="#Foreground" />
+  </defs>
+  <metadata
+     id="metadata17717">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+     d="M 4,0 4,4 0,4 0,6 4,6 4,10 6,10 6,6 10,6 10,4 6,4 6,0 Z"
+     id="path6163" />
+</svg>

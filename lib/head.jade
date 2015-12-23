@@ -1,0 +1,39 @@
+mixin ma(attr,val)
+  attribute(config_key='[Master],'+attr)= val
+mixin pa(attr,val)
+  attribute(persist='true',config_key=attr)= val
+mixin sa(attr,val)
+  attribute(config_key=attr)= val
+  
+manifest
+  title Nykto
+  author Sergey Ukolov
+  version 1.12.0.01
+  description
+  language en
+  license Creative Commons Attribution, Share-Alike 3.0 Unported
+  attributes
+    // Init number of available widgets
+    +ma('num_decks', 4)
+    +ma('num_samplers', 16)
+    +ma('num_preview_decks', 1)
+    // Init elements visibility
+    - var n = 1
+    while n <= 4
+      +pa('[Spinny'+n+++'],show_spinny', 1)
+    +pa('[Samplers],show_samplers', 0)
+    +pa('[Microphone],show_microphone', 0)
+    +pa('[Vinylcontrol],show_vinylcontrol', 0)
+    +pa('[PreviewDeck],show_previewdeck', 0)
+    +pa('[Library],show_library', 1)
+    +pa('[Library],show_coverart', 0)
+    +sa('[Int],0', 0)
+    +sa('[Int],1', 1)
+    +sa('[Int],2', 2)
+    +sa('[Int],3', 3)
+    +sa('[Int],4', 4)
+    +sa('[Int],5', 5)
+ObjectName Mixxx
+Style/(src='skin:style.qss')
+MinimumSize -1,-1
+Layout horizontal
